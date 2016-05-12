@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<title>Pyro Field</title>
+        <link rel="icon" href="../images/icon/icon.png"/>
+        <meta name="viewport" content="initial-scale=1"/>
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+			body {
+			width: 100%;
+			}
+			#gameCanvas, canvas {
+				margin: 0;
+				padding: 0;
+				border: none;
+                display: block;
+			}
+            #gui-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            #gui{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            #gui .close-button {display: none;}
+		</style>
+        
+        <!-- Assumed globals and stuff -->
+        <!-- THREE.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.min.js"></script>
+        <script src="https://cdn.rawgit.com/mrdoob/three.js/r73/examples/js/Gyroscope.js"></script>
+        <!-- lodash: useful for javascript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.js"></script>
+        <!-- Magical resize thing -->
+        <script src="https://cdn.rawgit.com/jeromeetienne/threex.windowresize/90326c74dc62ae107ee19b3b180535baa7cf12c6/threex.windowresize.js"></script>
+        <!-- Physijs -->
+        <script src="https://cdn.rawgit.com/chandlerprall/Physijs/7a5372647f5af47732e977c153c0d1c2550950a0/physi.js"></script>
+        
+        <!-- KeyMaster how to use it: https://github.com/madrobby/keymaster#other-key-queries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/keymaster/1.6.1/keymaster.min.js"></script>
+        
+        <!-- dat.GUI. This is for the menu. It makes things much easier :) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js"></script>
+        
+        <!-- three js stats -->
+        <script src="//rawgit.com/mrdoob/stats.js/master/build/stats.min.js"></script>
+        
+        <!-- For production we should switch to browserify+https://github.com/jaredhanson/deamdify in order to make the loading faster!  -->
+        <script data-main="scripts/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.22/require.js"></script> 
+        
+        
+	</head>
+	<body>
+		<div id='gameCanvas'>
+            <div id="gui-container">
+                <div id='gui'/>
+            </div>
+        </div>
+	</body>
+</html>
